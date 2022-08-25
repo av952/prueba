@@ -11,3 +11,22 @@ body{
     padding: 1rem;
 }
 
+.cabecera{
+    display: flex;
+    box-sizing: content-box;
+    background-color: rgba(17, 204, 110, 0.1);;
+    width: 100%;
+    box-shadow: 1px 1px 7px black ;
+}
+.logo{
+    width: 50px;    
+    background-color:  rgba(17, 204, 110, 0.2);
+    align-items: center;
+    margin: 10px;
+}
+img{
+    display: block;
+    margin: -10px;
+    max-width: 100%;
+    
+}
