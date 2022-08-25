@@ -3,3 +3,11 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.container{
+    display: grid;
+    margin: 0 auto;
+    width: 500px;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
