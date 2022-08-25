@@ -178,9 +178,37 @@ Pueden existir confliuctos cuando se cambia el mismo valor en dos ramas diferent
 
 [========]
 
+## Uso de GITHUB
 
+Teniendo un repositorio remoto en github (en blanco)
 
+	git remote add origin <url-gitHub>
 
+Si utilizamos el comando  `git remote` podemos notar que noara tenemos algo llamado **origin** y si usamos `git remote -v` nos va mostrar dos lineas de texto una de las cuales nos muestra que tenemos un archivo para hacer **fetch**(traernos cosas) y un **push** (enviar cosas)
 
+	git pull origin <nombre Rama> --alow-unrelated-histories
+	#con esto logramos que no nos de conflicto al traer una rama de github y 				fucionarla con  una rama local
 
+	git pull origin <nombreRama>
+
+Por ultimo para que se suban los archivos:
+
+	git pull origin <nombreRama>
+
+## Llaves públicas y llaver privadas
+
+### SSH
+
+Las llaves SSH no se generan por repositorio si no por persona, por lo que deben ser creadas desde la carpeta home para eso accedeemos a `cd`  y ahi nos llevara a la carpeta raiz donde podremos ejecutar el comando para crear las llaves
+
+	ssh-keygen -t rsa -b 4096 -C '<correoGitHub>'
+
+Luego tendremos que saber para windows y linux si esta corriendo el servidor de ssh
+
+	eval $(ssh-agent -s)
+
+Ahora necesitamos añadirla para que se pueda teneracceso a esa clave privada
+
+	ssh-add ~/.ssh/id_rsa
+	#con  ~ lo que hacemos es acortar el camino para encontrar la dirección especificada
 
