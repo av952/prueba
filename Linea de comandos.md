@@ -98,6 +98,11 @@ Comparar archivos
 
 	git diff <hash commit> <hash commit>
 
+Mirar el esado actual mas detallado
+
+	gitgit log --stat
+
+
 Para resetear y volver a un punto anterior en el tiempo usamos
 
 	git reset
@@ -116,6 +121,62 @@ Evitar que los ultimos cambios se envien, es decir aquellos archivos que hayamos
 
 	git reset HEAD <nombreArchivo>
 
+## repositorios remotos
+
+Para traer los archivos de un repositorio remoto
+
+	git clone <url>
+	git fetch #traer los cambios que se han realizado ha mi repositorio local
+	git merge #copiarlo en mis archivos fusionando lo que tengo con lo que trajo
+	
+	git pull #combina el fetch con el merge
+
+Para crear la rama desde la rama actual
+
+	git branch <nombre>
+
+Intercambiar entre ramas
+
+	git checkout <nombre>
+
+Para realizar la unión entre nuestras ramas, lo primero es estar ubicados en la rama a la que vamos a traer la información, digamos si estoy en master quiero traer la rama cabecera, pero no tendría sentido hacerlo al contrario.
+
+	git merge <nombreRama>
+
+Para hacer el*merge* y eliminar la rama en caso de que ya no la necesitemos usamos:
+
+	git merge -d <nombreRama>
+
+
+Recuperar la rama eliminada
+
+	git fsck --full --no-reflog | grep commit
+	git branch [branchName] [SHA1]
+	ó
+	git checkout <hash>
+
+
+Para revertir los cambios antes de haber echo comit de los archivos traidos de la otra rama podemos usar:
+
+	git restore .
+	git reset --hard
+
+Cambiar el nombre de una rama
+
+	git branch -m new-name
+
+Cambiar el nombre de otra rama
+
+	git checkout master
+	git branch -m old-name new-name
+
+
+## Solución de conflictos
+
+Pueden existir confliuctos cuando se cambia el mismo valor en dos ramas diferentes, cuando esto ocurre **git** nos muestra la zona afectada y tenemos que elegir una opción.
+
+
+[========]
 
 
 
