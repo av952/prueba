@@ -1,5 +1,13 @@
 ![Imgur](https://i.postimg.cc/dVNfQQdr/color.png)
 
+
+## Links
+
+[Git stash](https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash)
+
+[Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+
+
 Para ver en que carpeta estamos usamos
 
     pwd
@@ -224,6 +232,69 @@ Los tags nos sirven para hacer referencia a un punto especifico en el tiempo, co
 Para crear un tag anotado que es el que trae más información
 
 	git tag -a v1.4 -m "my version 1.4"
+
+
+### Git rebase
+
+Con git rebase fusionamos una rama por ejemplo la rama *bug-fix* con la rama *main* pero eliminando todo rastro de la anterior rama como si nunca hubiera estado ahí.
+
+		git rebase <nombreRama>
+
+
+1[img](https://i.postimg.cc/jjT9QBj2/Untitled-5d59eeed-f90a-4eed-b893-dc32de72e622.jpg)
+
+
+
+### Git stash 
+
+Con esta funcionalidad es posible hacer un cambio entre ramas sin necesidad de guardar los cambios, pero hay que tener en cuenta que lo que hayas modificado se va a deshacer hasta que tu recuperes los datos almacenados en el **stash**
+
+	#almacenar los datos que tienen seguimiento
+	git stash
+
+	#Almacenar los datos que aún no tienen seguimiento
+	git stash -u 
+
+	#Almacenar los cambios de los archivos ignorados
+	git stash -a || --all
+
+	#crear una nueva rama a partir del estash
+	git stash branch
+
+	#limpiar el stash
+	git stash drop
+
+	#Limpiar todos los stash
+	git stash clear 
+
+	#recuperar los datos almacenados
+	git stash pop
+
+
+### Git clean
+
+Con esta propiedad es posible limpiar tu proyesto de archivos no deseados. Tener en cuenta que este comando solo borrara archivos nuevos.
+
+	#Hace una previsualización de los archivos a borrar
+	git clean --dry-run
+
+	#Elimina los archivos
+	git clean -f
+
+
+### Git cherry-pick: traer commits viejos al head de un branch
+
+Con esta funcionalidad podemos regresar a un punto anterior en el tiempo para fucionar con la rama en la que estemos trabajando sin importar que el commit sea de otra rama. esta practica no es muy recomendada debido a que puede causar conflictos.
+
+	git cherry-pick commitSha
+
+
+### Git reset y Reflog
+
+
+
+
+
 
 
 
