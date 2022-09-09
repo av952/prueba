@@ -212,3 +212,16 @@ Ahora necesitamos añadirla para que se pueda teneracceso a esa clave privada
 	ssh-add ~/.ssh/id_rsa
 	#con  ~ lo que hacemos es acortar el camino para encontrar la dirección especificada
 
+
+### TAGS
+
+Los tags nos sirven para hacer referencia a un punto especifico en el tiempo, como puede ser un cambio importante en nuestro archivo o una nueva versión. Existen dos tipos de etiquedado las **ligeras** y las **anotadas** para crear un tag ligero es tan facil como:
+
+	git tag <tagname>
+
+Para crear un tag anotado que es el que trae más información
+
+	git tag -a v1.4 -m "my version 1.4"
+
+
+

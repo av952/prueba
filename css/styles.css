@@ -34,8 +34,9 @@ img{
 .footer-container{
     display: block;
     background-color: burlywood;
-    position: absolute;
+    position: static;
     width: 100%;
     bottom: 0;
+    padding: 10px;
 }
 
