@@ -291,6 +291,10 @@ Con esta funcionalidad podemos regresar a un punto anterior en el tiempo para fu
 
 ### Git reset y Reflog
 
+Por medio de **reflog** podemos acceder a toda la historia para poder volver a un punto especifico antes de haber echo algo mal utilizando el *hash* que nos dan para pasarselo a *reseet*
+
+	git reset --hard <hash>
+
 
 
 
