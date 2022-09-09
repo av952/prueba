@@ -1,3 +1,5 @@
+![Imgur](https://i.postimg.cc/dVNfQQdr/color.png)
+
 Para ver en que carpeta estamos usamos
 
     pwd
